@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js(x)?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
@@ -29,10 +29,12 @@ module.exports = {
       }
     ]
   },
+  devtool: 'eval',
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
-      filename: "./index.html"
+      filename: "./index.html",
+      inject: 'body'
     })
   ]
 };
