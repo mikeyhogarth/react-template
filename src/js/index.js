@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-const HelloWorld = require('./components/HelloWorld.js')
+import HelloWorld from './components/HelloWorld.jsx'
 
 ReactDOM.render(
   <HelloWorld />,
